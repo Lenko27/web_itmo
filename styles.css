@@ -1,5 +1,5 @@
 body {
-    font-family: 'Bookman Old Style', serif;
+    font-family: 'Merriweather', serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -23,6 +23,7 @@ h1 {
 
 h2 {
     font-size: 1.8rem;
+    font-weight: 300;
     margin-top: 40px;
 }
 
@@ -41,6 +42,11 @@ h3 {
     font-size: 2.5rem;
     margin: 0;
     line-height: 1.1;
+    text-transform: lowercase;
+}
+
+.header__title:hover {
+    text-transform: capitalize;
 }
 
 .header__subtitle {
@@ -49,7 +55,7 @@ h3 {
 }
 
 .nav__button {
-    font-family: 'Bookman Old Style', sans-serif;
+    font-family: 'Merriweather', serif;
     background-color: #444;
     color: white;
     border: none;
@@ -58,10 +64,13 @@ h3 {
     cursor: pointer;
     font-size: 1rem;
     font-weight: bolder;
+    text-decoration: none;
 }
 
 .nav__button:hover {
     background-color: #555;
+    text-decoration: underline;
+    font-style: italic;
 }
 
 .main-content {
@@ -71,7 +80,7 @@ h3 {
 }
 
 .section__title {
-    color: #333333;
+    color: #333;
     font-size: 1.8rem;
     font-weight: bold;
     margin-bottom: 20px;
@@ -153,4 +162,8 @@ h3 {
     font-size: 0.9rem;
     margin-top: 40px;
     border-top: 2px solid #444;
+}
+
+.footer__quote{
+    text-decoration: line-through;
 }

@@ -1,0 +1,156 @@
+body {
+    font-family: 'Bookman Old Style', serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+}
+
+h2, h3 {
+    color: #444;
+    margin: 10px 0;
+}
+
+h1 {
+    color: #333;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-top: 40px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.header__logo {
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+}
+
+.header__title {
+    font-size: 2.5rem;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.header__subtitle {
+    font-size: 1.3rem;
+    color: #555;
+}
+
+.nav__button {
+    font-family: 'Bookman Old Style', sans-serif;
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 45px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+.nav__button:hover {
+    background-color: #555;
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section__title {
+    color: #333333;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.section__description {
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+.animal-card {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.animal-card__image {
+    width: 400px;
+    height: auto;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.animal-card__image:hover {
+    transform: scale(1.05);
+}
+
+.animal-card__title {
+    color: #555;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.animal-card__description {
+    font-size: 1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.aside {
+    margin-top: 40px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.aside__title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.aside__list {
+    list-style-position: inside;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 400px;
+}
+
+.aside__list-item {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    font-size: 0.9rem;
+    margin-top: 40px;
+    border-top: 2px solid #444;
+}

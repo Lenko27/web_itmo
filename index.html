@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -17,8 +18,10 @@
     <img src="https://img.freepik.com/premium-vector/zoo-gate-icon-black-white_755164-13783.jpg?semt=ais_hybrid"
          alt="Логотип зоопарка"
          class="header__logo">
-    <h1 class="header__title">Мой Любимый <br class="title-break"/>Зоопарк</h1>
-    <p class="header__subtitle">Добро пожаловать в мир <em>удивительных</em> животных!</p>
+    <div class="header__title-container">
+        <h1 class="header__title">Мой Любимый<br>Зоопарк</h1>
+        <p class="header__subtitle">Привет в мире<br><em>удивительных</em> животных!</p>
+    </div>
 </header>
 
 <nav class="nav">
@@ -32,43 +35,69 @@
         <h2 class="section__title">Животные нашего зоопарка</h2>
         <p class="section__description">В нашем зоопарке можно встретить множество удивительных животных. Вот некоторые из них:</p>
 
-        <article class="animal-card">
-            <h3 class="animal-card__title">Тигр Амурский - Кеша</h3>
-            <img src="https://cdn.spbdnevnik.ru/uploads/block/image/763914/__medium_%D0%B7%D0%B0%D0%B3%D1%80%D1%83%D0%B6%D0%B5%D0%BD%D0%BE%20_1_.jpg.jpg"
-                 alt="Тигр Амурский"
-                 class="animal-card__image">
-            <p class="animal-card__description">
-                <strong>Амурский тигр</strong> - самый крупный тигр на планете. Вес крупного млекопитающего может превышать <em>300 кг</em>.
-                В некоторых источников сообщается о самцах весом до <em>390 кг</em>, хотя сейчас столь крупные особи не встречаются.
-                Длина тела <em>160-290 см,</em> хвоста - <em>110 кг.</em> Амурский тигр является украшением дальневосточной тайги
-                и объектом поклонения многих народов Дальнего Востока.
-            </p>
-        </article>
+        <div class="animal-cards-container">
+            <article class="animal-card">
+                <h3 class="animal-card__title">Тигр Амурский - Кеша</h3>
+                <img src="https://cdn.spbdnevnik.ru/uploads/block/image/763914/__medium_%D0%B7%D0%B0%D0%B3%D1%80%D1%83%D0%B6%D0%B5%D0%BD%D0%BE%20_1_.jpg.jpg"
+                     alt="Тигр Амурский"
+                     class="animal-card__image">
+                <p class="animal-card__description">
+                    <strong>Амурский тигр</strong> - самый крупный тигр на планете. Является украшением дальневосточной тайги
+                    и объектом поклонения многих народов Дальнего Востока.
+                </p>
+            </article>
 
-        <article class="animal-card">
-            <h3 class="animal-card__title">Белый Медведь - Поляр</h3>
-            <img src="https://lh3.googleusercontent.com/proxy/zihAnLE_aXfMgaPWLWPFaNeKzPQJt54d41uD-JPSAXbkvpId_hWrOqmWYQ5VjSvcu35NkjM0zH4EZUqoLc8iPg"
-                 alt="Белый медведь"
-                 class="animal-card__image">
-            <p class="animal-card__description">
-                <strong>Белый медведь</strong> - величественный обитатель Арктики. Этот хищник известен своей способностью адаптироваться к суровому климату.
-                Толстый слой жира, <em>до 10 см,</em> помогает сохранять тепло в холодных водах, а его мех <em>не белый, а прозрачный,</em> пропускающий свет, создавая иллюзию белого цвета.
-                Белый медведь может весить до <em>700 кг,</em> а самцы достигают длины <em>3 метра.</em> Эти медведи могут без труда проплыть <em>100 километров</em> без отдыха, двигаясь со скоростью <em>6-10 км/ч.</em>
-            </p>
-        </article>
+            <article class="animal-card">
+                <h3 class="animal-card__title">Белый Медведь - Пол</h3>
+                <img src="https://lh3.googleusercontent.com/proxy/zihAnLE_aXfMgaPWLWPFaNeKzPQJt54d41uD-JPSAXbkvpId_hWrOqmWYQ5VjSvcu35NkjM0zH4EZUqoLc8iPg"
+                     alt="Белый медведь"
+                     class="animal-card__image">
+                <p class="animal-card__description">
+                    <strong>Белый медведь</strong> - величественный обитатель Арктики. Этот хищник известен своей способностью адаптироваться к суровому климату.
+                </p>
+            </article>
 
-        <article class="animal-card">
-            <h3 class="animal-card__title">Жираф - Маша</h3>
-            <img src="https://media-cdn.tripadvisor.com/media/photo-s/0b/5f/25/5b/caption.jpg"
-                 alt="Жираф"
-                 class="animal-card__image">
-            <p class="animal-card__description">
-                <strong>Жираф</strong> - самое высокое наземное животное на планете. Высота взрослого самца может достигать <em>5.5-6 метров</em>,
-                а масса доходит до <em>1,200 кг</em>. Длинная шея позволяет жирафам питаться листьями с самых высоких деревьев, особенно акаций.
-                Сердце жирафа является одним из самых мощных среди наземных животных, чтобы поддерживать кровообращение на такой высоте.
-                Его длина достигает <em>60 см</em>, а вес – <em>до 11 кг</em>.
-            </p>
-        </article>
+            <article class="animal-card">
+                <h3 class="animal-card__title">Жираф - Маша</h3>
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/0b/5f/25/5b/caption.jpg"
+                     alt="Жираф"
+                     class="animal-card__image">
+                <p class="animal-card__description">
+                    <strong>Жираф</strong> - самое высокое наземное животное на планете. Высота взрослого самца может достигать <em>5.5-6 метров</em>,
+                    а масса доходит до <em>1,200 кг</em>.
+                </p>
+            </article>
+
+            <article class="animal-card-no-mobile">
+                <h3 class="animal-card__title">Зебра - Брауни</h3>
+                <img src="https://zoopark-vl.ru/wp-content/uploads/2022/12/afrikanskaya-zebra-1.jpg"
+                     alt="Зебра"
+                     class="animal-card__image">
+                <p class="animal-card__description">
+                    <strong>Зебры</strong> являются разновидностью диких лошадей. У всех зебр одинаковый тип раскраски — черно-белые полосы.
+                </p>
+            </article>
+
+            <article class="animal-card-no-mobile">
+                <h3 class="animal-card__title">Бегемот - Бега</h3>
+                <img src="https://avatars.dzeninfra.ru/get-zen_doc/1554513/pub_5f683a50b142594c5332f49b_5f6e2a7fdf292d11099d1b3c/scale_1200"
+                     alt="Бегемот"
+                     class="animal-card__image">
+                <p class="animal-card__description">
+                    <strong>Бегемот</strong> имеет массивное тело; большая пасть; кожа при рождении розовая.
+                </p>
+            </article>
+
+            <article class="animal-card-no-mobile">
+                <h3 class="animal-card__title">Крокодил - Дил</h3>
+                <img src="https://cdn.goavilla.ru/image/CID_0320_f6dff6c1564f13be92e02a93cc7dabf4.jpg"
+                     alt="Крокодил"
+                     class="animal-card__image">
+                <p class="animal-card__description">
+                    <strong>Крокодил</strong> - крупное хищное водное пресмыкающееся из отряда ящеров с толстой панцирной кожей.
+                </p>
+            </article>
+        </div>
     </section>
 
     <aside class="aside">
@@ -79,6 +108,52 @@
             <li class="aside__list-item">Жирафы спят всего 30 минут в сутки.</li>
         </ul>
     </aside>
+
+    <section class="table-section">
+        <h2>Питание животных</h2>
+        <div class="table-wrapper">
+            <div class="animal-table">
+                <div class="animal-table__header animal-table__row">
+                    <div class="animal-table__cell">Животное</div>
+                    <div class="animal-table__cell">Рацион</div>
+                    <div class="animal-table__cell">Вес пищи в день</div>
+                </div>
+                <div class="animal-table__body">
+                    <div class="animal-table__row">
+                        <div class="animal-table__cell">Тигр</div>
+                        <div class="animal-table__cell">Курица, говядина, кролик, рыба</div>
+                        <div class="animal-table__cell">10 кг</div>
+                    </div>
+                    <div class="animal-table__row">
+                        <div class="animal-table__cell">Медведь</div>
+                        <div class="animal-table__cell">Рыба, мясо</div>
+                        <div class="animal-table__cell">15 кг</div>
+                    </div>
+                    <div class="animal-table__row">
+                        <div class="animal-table__cell">Жираф</div>
+                        <div class="animal-table__cell">Листья акации</div>
+                        <div class="animal-table__cell">30 кг</div>
+                    </div>
+                    <div class="animal-table__row">
+                        <div class="animal-table__cell">Зебра</div>
+                        <div class="animal-table__cell">Трава, сено</div>
+                        <div class="animal-table__cell">12 кг</div>
+                    </div>
+                    <div class="animal-table__row">
+                        <div class="animal-table__cell">Бегемот</div>
+                        <div class="animal-table__cell">Трава, водные растения</div>
+                        <div class="animal-table__cell">40 кг</div>
+                    </div>
+                    <div class="animal-table__row">
+                        <div class="animal-table__cell">Крокодил</div>
+                        <div class="animal-table__cell">Рыба, мелкие млекопитающие</div>
+                        <div class="animal-table__cell">5-10 кг</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </main>
 
 <footer class="footer">

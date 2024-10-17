@@ -1,169 +1,261 @@
-body {
-    font-family: 'Merriweather', serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-    color: #333;
-    text-align: center;
-}
+    body {
+        font-family: 'Merriweather', serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+        color: #333;
+        text-align: center;
+    }
 
-h2, h3 {
-    color: #444;
-    margin: 10px 0;
-}
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        flex-direction: column;
+    }
 
-h1 {
-    color: #333;
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin: 0;
-    line-height: 1;
-}
+    .header__logo {
+        width: 220px;
+        height: 220px;
+        margin-bottom: 20px;
+    }
 
-h2 {
-    font-size: 1.8rem;
-    font-weight: 300;
-    margin-top: 40px;
-}
+    .header__title-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
+    .header__subtitle {
+        margin-top: 10px;
+        font-size: 1.2rem;
+        color: #666;
+    }
 
-.header__logo {
-    width: 200px;
-    height: 200px;
-    margin-right: 20px;
-}
+    h1 {
+        color: #333;
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin: 0;
+        line-height: 1;
+    }
 
-.header__title {
-    font-size: 2.5rem;
-    margin: 0;
-    line-height: 1.1;
-    text-transform: lowercase;
-}
+    h2, h3 {
+        color: #444;
+    }
 
-.header__title:hover {
-    text-transform: capitalize;
-}
+    h2 {
+        font-size: 1.8rem;
+        font-weight: 300;
+        margin-top: 40px;
+    }
 
-.header__subtitle {
-    font-size: 1.3rem;
-    color: #555;
-}
+    h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
 
-.nav__button {
-    font-family: 'Merriweather', serif;
-    background-color: #444;
-    color: white;
-    border: none;
-    padding: 10px 45px;
-    margin: 0 10px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bolder;
-    text-decoration: none;
-}
+    .nav {
+        display: flex;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background-color: #fff;
+        padding: 10px 0;
+    }
 
-.nav__button:hover {
-    background-color: #555;
-    text-decoration: underline;
-    font-style: italic;
-}
+    .nav__button {
+        font-family: 'Merriweather', serif;
+        background-color: #444;
+        color: white;
+        border: none;
+        padding: 10px 45px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: bolder;
+        text-decoration: none;
+        margin-left: 10px;
+    }
 
-.main-content {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
+    .nav__button:hover {
+        background-color: #555;
+        text-decoration: underline;
+        font-style: italic;
+    }
 
-.section__title {
-    color: #333;
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
+    .main-content {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-.section__description {
-    font-size: 1.2rem;
-    font-weight: normal;
-}
+    .section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-.animal-card {
-    margin-bottom: 40px;
-    text-align: center;
-}
+    .section__title {
+        color: #333;
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
 
-.animal-card__image {
-    width: 400px;
-    height: auto;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease-in-out;
-}
+    .section__description {
+        font-size: 1.2rem;
+        font-weight: normal;
+    }
 
-.animal-card__image:hover {
-    transform: scale(1.05);
-}
+    .animal-cards-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
 
-.animal-card__title {
-    color: #555;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
+    .animal-card,
+    .animal-card-no-mobile{
+        margin: 20px;
+        width: 300px;
+    }
 
-.animal-card__description {
-    font-size: 1rem;
-    color: #555;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.8;
-}
+    .animal-card__image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s ease-in-out;
+    }
 
-.aside {
-    margin-top: 40px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
+    .animal-card__image:hover {
+        transform: scale(1.05);
+    }
 
-.aside__title {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    color: #333;
-}
+    .animal-card__title {
+        color: #555;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
 
-.aside__list {
-    list-style-position: inside;
-    padding: 0;
-    margin: 0 auto;
-    text-align: center;
-    max-width: 400px;
-}
+    .animal-card__description {
+        font-size: 1rem;
+        color: #555;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.8;
+    }
 
-.aside__list-item {
-    font-size: 1rem;
-    margin-bottom: 10px;
-    white-space: nowrap;
-}
+    .aside {
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 500px;
+        margin-top: 70px;
+    }
 
-.footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
-    font-size: 0.9rem;
-    margin-top: 40px;
-    border-top: 2px solid #444;
-}
 
-.footer__quote{
-    text-decoration: line-through;
-}
+    .aside__title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        color: #333;
+    }
+
+    .aside__list {
+        list-style-position: inside;
+        padding: 0;
+        margin: 0 auto;
+        text-align: center;
+        max-width: 400px;
+    }
+
+    .aside__list-item {
+        font-size: 1rem;
+        margin-bottom: 10px;
+        white-space: nowrap;
+    }
+
+    .table-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+    }
+
+    .table-wrapper {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .animal-table {
+        display: grid;
+        grid-template-columns: 1fr 4fr 4fr;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .animal-table__row,
+    .animal-table__header,
+    .animal-table__body{
+        display: contents;
+    }
+
+    .animal-table__cell {
+        padding: 15px;
+        border: 1px solid #ddd;
+        text-align: center;
+    }
+
+    .animal-table__header {
+        font-weight: bold;
+        background-color: #f0f0f0;
+    }
+
+    .animal-table__row:nth-child(even) .animal-table__cell {
+        background-color: #f9f9f9;
+        font-family: "Roboto Light", serif;
+    }
+
+    .animal-table__row:nth-child(odd) .animal-table__cell {
+        background-color: #fff;
+        font-family: "Roboto", serif;
+    }
+
+    .footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #333;
+        color: #fff;
+        font-size: 0.9rem;
+        margin-top: 40px;
+        border-top: 2px solid #444;
+    }
+
+    .footer__quote {
+        text-decoration: line-through;
+    }
+
+    @media screen and (max-width: 768px) {
+        .footer__quote {
+            display: none;
+        }
+
+        .animal-card-no-mobile {
+            display: none;
+        }
+
+        .table-section {
+            display: none;
+        }
+    }

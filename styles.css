@@ -219,16 +219,21 @@
         padding: 15px;
         text-align: center;
         border-bottom: 1px solid #ddd;
-        background-color: #f9f9f9;
-    }
-
-    .animal-table-item:nth-child(even) {
-        background-color: #fff;
+        background-color: #f0f0f0;
     }
 
     thead, tbody, tr {
         display: contents;
     }
+
+    .animal-table tr:nth-child(odd) td {
+        background-color: #f9f9f9;
+    }
+
+    .animal-table tr:nth-child(even) td {
+        background-color: #f5f5f5;
+    }
+
 
     @media screen and (max-width: 768px) {
         .animal-card-no-mobile{

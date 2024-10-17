@@ -184,52 +184,100 @@
         margin-bottom: 10px;
         white-space: nowrap;
     }
-
     .table-section {
         display: flex;
+        justify-content: center;
         flex-direction: column;
         align-items: center;
         margin-top: 40px;
     }
 
+    .table-section {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+        width: 100%;
+        padding: 0;
+    }
+
     .table-wrapper {
         width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
+        overflow-x: auto;
     }
 
     .animal-table {
-        display: grid;
-        grid-template-columns: 1fr 4fr 4fr;
+        display: flex;
+        flex-direction: column;
         width: 100%;
-        gap: 10px;
+        border-collapse: collapse;
+        margin: 0;
+        min-width: 600px;
     }
 
-    .animal-table__row,
-    .animal-table__header,
-    .animal-table__body{
-        display: contents;
+    .animal-table thead,
+    .animal-table tbody {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 
-    .animal-table__cell {
+    .animal-table tr {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .animal-table th,
+    .animal-table td {
+        flex: 1;
         padding: 15px;
-        border: 1px solid #ddd;
         text-align: center;
+        border: 1px solid #ddd;
+        box-sizing: border-box;
+        min-width: 120px;
     }
 
-    .animal-table__header {
-        font-weight: bold;
+    .animal-table td:nth-child(2) {
+        min-width: 200px;
+        word-wrap: break-word;
+        white-space: normal;
+    }
+
+    .animal-table thead {
         background-color: #f0f0f0;
     }
 
-    .animal-table__row:nth-child(even) .animal-table__cell {
+    .animal-table tbody tr:nth-child(even) {
         background-color: #f9f9f9;
-        font-family: "Roboto Light", serif;
     }
 
-    .animal-table__row:nth-child(odd) .animal-table__cell {
+    .animal-table tbody tr:nth-child(odd) {
         background-color: #fff;
-        font-family: "Roboto", serif;
+    }
+
+    .animal-table th {
+        font-weight: bold;
+        font-family: 'Roboto', serif;
+    }
+
+    .animal-table td {
+        font-family: 'Roboto Light', serif;
+    }
+
+    @media screen and (max-width: 768px) {
+        .animal-table {
+            min-width: unset;
+        }
+
+        .animal-card-no-mobile{
+            display: none;
+        }
+
+        .footer__quote{
+            display: none;
+        }
     }
 
     .footer {
@@ -244,18 +292,4 @@
 
     .footer__quote {
         text-decoration: line-through;
-    }
-
-    @media screen and (max-width: 768px) {
-        .footer__quote {
-            display: none;
-        }
-
-        .animal-card-no-mobile {
-            display: none;
-        }
-
-        .table-section {
-            display: none;
-        }
     }

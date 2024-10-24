@@ -86,6 +86,13 @@
         font-style: italic;
     }
 
+    .nav__button.active {
+        background-color: #ff6f61;
+        font-weight: bold;
+        pointer-events: none;
+        cursor: default;
+    }
+
     .main-content {
         max-width: 1200px;
         margin: 40px auto;
@@ -125,8 +132,10 @@
         width: 300px;
     }
 
+    .buy-ticket__image,
+    .buy-ticket-no-mobile__image,
     .animal-card__image {
-        width: 100%;
+        width: 300px;
         height: auto;
         margin-bottom: 20px;
         border: 1px solid #ddd;
@@ -135,9 +144,123 @@
         transition: transform 0.2s ease-in-out;
     }
 
+    .buy-ticket-photo-section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    .buy-ticket__image,
+    .buy-ticket-no-mobile__image{
+        width: 400px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 10px 30px;
+    }
+
+    .buy-ticket__image:hover,
+    .buy-ticket-no-mobile__image:hover,
     .animal-card__image:hover {
         transform: scale(1.05);
     }
+
+    .buy-ticket-button {
+        font-family: 'Merriweather', serif;
+        margin: 20px;
+        background-color: #ff6f61;
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+
+    .buy-ticket-button:hover {
+        background-color: #e55b50;
+    }
+
+    .offers-section, .return-policy-section {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 2px solid #444;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        background-color: #f9f9f9;
+    }
+
+    .offers-section{
+        margin-top: 40px;
+    }
+
+    .section__title {
+        color: #333;
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .section__description {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.5;
+    }
+
+    .contacts-section, .contact-form-section {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        background-color: #f9f9f9;
+    }
+
+    .contact-info {
+        margin-bottom: 30px;
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-form label {
+        margin: 10px 0 5px;
+        font-weight: bold;
+    }
+
+    .contact-form input, .contact-form textarea {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+
+    .contact-form input:focus, .contact-form textarea:focus {
+        border-color: #ff6f61;
+        outline: none;
+    }
+
+    .submit-button {
+        margin-top: 15px;
+        background-color: #ff6f61;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .submit-button:hover {
+        background-color: #e55b50;
+    }
+
 
     .animal-card__title {
         color: #555;
@@ -183,6 +306,7 @@
         margin-bottom: 10px;
         white-space: nowrap;
     }
+
     .table-section {
         display: flex;
         justify-content: center;
@@ -191,15 +315,7 @@
         margin-top: 40px;
     }
 
-    .animal-table-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 40px;
-        width: 100%;
-    }
-
-    .animal-table {
+    .zoo-table {
         display: grid;
         grid-template-columns: 1fr 2fr 2fr;
         width: 100%;
@@ -207,7 +323,7 @@
         text-align: center;
     }
 
-    .animal-table-header {
+    .zoo-table-header {
         background-color: #f0f0f0;
         font-weight: bold;
         padding: 15px;
@@ -215,7 +331,7 @@
         border-bottom: 2px solid #ddd;
     }
 
-    .animal-table-item {
+    .zoo-table-item {
         padding: 15px;
         text-align: center;
         border-bottom: 1px solid #ddd;
@@ -226,24 +342,16 @@
         display: contents;
     }
 
-    .animal-table tr:nth-child(odd) td {
+    .zoo-table tr:nth-child(odd) td {
         background-color: #f9f9f9;
     }
 
-    .animal-table tr:nth-child(even) td {
+    .zoo-table tr:nth-child(even) td {
         background-color: #f5f5f5;
     }
 
 
     @media screen and (max-width: 768px) {
-        .animal-card-no-mobile{
-            display: none;
-        }
-
-        .footer__quote{
-            display: none;
-        }
-
         .nav {
             flex-direction: column;
             align-items: stretch;
@@ -254,6 +362,23 @@
         .nav__button {
             width: 100%;
             margin: 5px 0;
+        }
+
+        .animal-card-no-mobile{
+            display: none;
+        }
+
+        .buy-ticket-no-mobile__image{
+            display: none;
+        }
+
+        .offers-section,
+        .return-policy-section{
+            display: none;
+        }
+
+        .footer__quote{
+            display: none;
         }
     }
 

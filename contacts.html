@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="контакты, зоопарк, информация">
+    <meta name="description" content="Контактная информация о Моём Любимом Зоопарке. Свяжитесь с нами!">
+    <title>Контакты - Мой Любимый Зоопарк</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+<header class="header">
+    <img src="https://img.freepik.com/premium-vector/zoo-gate-icon-black-white_755164-13783.jpg?semt=ais_hybrid"
+         alt="Логотип зоопарка"
+         class="header__logo">
+    <div class="header__title-container">
+        <h1 class="header__title">Мой Любимый<br>Зоопарк</h1>
+        <p class="header__subtitle">Привет в мире<br><em>удивительных</em> животных!</p>
+    </div>
+</header>
+
+<nav class="nav">
+    <a href="index.html" class="nav__button">Главная</a>
+    <a href="tickets.html" class="nav__button">Купить билет</a>
+    <a href="contacts.html" class="nav__button active">Контакты</a>
+</nav>
+
+<main class="main-content">
+    <section class="contacts-section">
+        <h2>Контактная информация</h2>
+        <div class="contact-info">
+            <p><strong>Адрес:</strong> ул. Пушкина, д. Колотушкина, Санкт-Петербург, Россия</p>
+            <p><strong>Телефон:</strong> +7 (123) 456-78-90</p>
+            <p><strong>Email:</strong> myfav@zoo.ru</p>
+            <p><strong>Часы работы:</strong> Пн-Пт: 9:00 - 18:00, Сб-Вс: 10:00 - 19:00</p>
+        </div>
+    </section>
+
+    <section class="contact-form-section">
+        <h2>Свяжитесь с нами</h2>
+        <form class="contact-form">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Сообщение:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit" class="submit-button">Отправить</button>
+        </form>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>&copy; 2024 Мой любимый зоопарк. Все права защищены.</p>
+    <blockquote class="footer__quote">Бытие есть, а небытия нет</blockquote>
+</footer>
+</body>
+</html>

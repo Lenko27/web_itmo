@@ -209,7 +209,8 @@
         line-height: 1.5;
     }
 
-    .contacts-section, .contact-form-section {
+    .contacts-section,
+    .contact-form-section {
         max-width: 800px;
         margin: 40px auto;
         padding: 20px;
@@ -233,14 +234,16 @@
         font-weight: bold;
     }
 
-    .contact-form input, .contact-form textarea {
+    .contact-form input,
+    .contact-form textarea {
         padding: 10px;
         border: 1px solid #ddd;
         border-radius: 5px;
         font-size: 1rem;
     }
 
-    .contact-form input:focus, .contact-form textarea:focus {
+    .contact-form input:focus,
+    .contact-form textarea:focus {
         border-color: #ff6f61;
         outline: none;
     }
@@ -260,7 +263,6 @@
     .submit-button:hover {
         background-color: #e55b50;
     }
-
 
     .animal-card__title {
         color: #555;

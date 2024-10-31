@@ -12,14 +12,12 @@
 })();
 
 document.addEventListener("DOMContentLoaded", function() {
-    let curPage = window.location.pathname.split("/").pop();
+    let curPage = window.location.pathname;
     let navButtons = document.querySelectorAll(".nav__button");
     navButtons.forEach(button => {
-        let buttonPage = button.getAttribute("href").split("/").pop();
+        let buttonPage = new URL(button.href).pathname;
         if (buttonPage === curPage) {
             button.classList.add("active");
         }
     });
 });
-
-

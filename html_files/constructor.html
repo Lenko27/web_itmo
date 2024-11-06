@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конструктор программы дня</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../scripts/constructor.js" defer></script>
+</head>
+<body>
+<header class="header">
+    <img src="https://img.freepik.com/premium-vector/zoo-gate-icon-black-white_755164-13783.jpg?semt=ais_hybrid"
+         alt="Логотип зоопарка"
+         class="header__logo">
+    <div class="header__title-container">
+        <h1 class="header__title">Мой Любимый<br>Зоопарк</h1>
+        <p class="header__subtitle">Привет в мире<br><em>удивительных</em> животных!</p>
+    </div>
+</header>
+
+<nav class="nav">
+    <a href="index.html" class="nav__button">Главная</a>
+    <a href="tickets.html" class="nav__button">Билеты</a>
+    <a href="contacts.html" class="nav__button">Контакты</a>
+    <a href="constructor.html" class="nav__button active">Конструктор активностей</a>
+</nav>
+
+<main class="main-content">
+    <section class="form-section">
+        <h1 class="section__title">Конструктор программы дня</h1>
+        <form id="activityForm" class="activity-form">
+            <label for="activity">Выберите активности:</label>
+            <select id="activity" class="form__select">
+                <option value="Шоу с дельфинами|10:00|Запись подтверждена">Шоу с дельфинами (10:00)</option>
+                <option value="Катание на слонах|12:00|Запись подтверждена">Катание на слонах (12:00)</option>
+                <option value="Шоу с рептилиями|14:00|Запись подтверждена">Шоу с рептилиями (14:00)</option>
+                <option value="Шоу птиц|16:00|Запись подтверждена">Шоу птиц (16:00)</option>
+            </select>
+            <button type="button" id="addActivity" class="form__button">Добавить активность</button>
+            <button type="button" id="clearActivities" class="form__button">Очистить программу</button>
+            <button type="button" id="generateTable" class="form__button">Показать расписание</button>
+            <p class="selected-activities-title">Выбранные активности:</p>
+        </form>
+        <div id="error-message" class="error-message"></div>
+        <div id="todoList" class="todo-list"></div>
+        <div id="scheduleTable" class="schedule-table"></div>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>&copy; 2024 Мой любимый зоопарк. Все права защищены.</p>
+</footer>
+</body>
+</html>

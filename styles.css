@@ -351,7 +351,85 @@
     .zoo-table tr:nth-child(even) td {
         background-color: #f5f5f5;
     }
+    .form-section {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 
+    .activity-form label, .activity-form select, .activity-form button {
+        font-size: 1rem;
+    }
+
+    .activity-form select, .form__button {
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        width: 100%;
+    }
+
+    .form__button {
+        display: inline-block;
+        width: auto;
+        margin: 10px 10px 5px;
+        padding: 10px 20px;
+        font-size: 1rem;
+        font-family: 'Merriweather', serif;
+        background-color: #787878;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.2s ease;
+    }
+
+    .form__button:hover {
+        background-color: #FF6F61;
+    }
+
+    .selected-activities-title {
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-top: 30px;
+        color: #333;
+    }
+
+    /* Ошибки */
+    .error-message {
+        color: #ff6f61;
+        font-size: 0.9rem;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    /* Список задач */
+    .todo-list p {
+        background-color: #e0e0e0;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    /* Таблица расписания */
+    .schedule-table table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    .schedule-table th, .schedule-table td {
+        padding: 10px;
+        border: 1px solid #ddd;
+    }
+
+    .schedule-table th {
+        background-color: #f0f0f0;
+        font-weight: bold;
+    }
 
     @media screen and (max-width: 768px) {
         .nav {
@@ -364,6 +442,11 @@
         .nav__button {
             width: 100%;
             margin: 5px 0;
+        }
+
+        .form__button {
+            width: 100%; /* Растягиваем кнопки на 100% ширины */
+            margin: 5px 0; /* Добавляем вертикальные отступы для разделения кнопок */
         }
 
         .animal-card-no-mobile{

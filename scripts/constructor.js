@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const todoList = document.getElementById("todoList");
     const scheduleTable = document.getElementById("scheduleTable");
     const errorMessage = document.getElementById("error-message");
-
     let activities = JSON.parse(localStorage.getItem("activities")) || [];
 
     function addActivity() {
@@ -16,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const existingActivity = activities.find(a => a.time === activityTime);
 
         if (existingActivity) {
-            errorMessage.textContent = "Ошибка: Активность на это время уже добавлена!";
+            errorMessage.textContent = "Активность на это время уже добавлена";
             return;
         }
 
@@ -29,9 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function sortActivitiesByTime() {
         activities.sort((a, b) => {
-            const [hoursA, minutesA] = a.time.split(":").map(Number);
-            const [hoursB, minutesB] = b.time.split(":").map(Number);
-            return hoursA - hoursB || minutesA - minutesB;
+            const [hA, minA] = a.time.split(":").map(Number);
+            const [hB, minB] = b.time.split(":").map(Number);
+            return hA - hB || minA - minB;
         });
     }
 
@@ -81,6 +80,5 @@ document.addEventListener("DOMContentLoaded", () => {
     addActivityButton.addEventListener("click", addActivity);
     clearActivitiesButton.addEventListener("click", clearActivities);
     generateTableButton.addEventListener("click", generateScheduleTable);
-
     loadActivities();
 });

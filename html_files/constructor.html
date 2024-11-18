@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Конструктор программы дня</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
@@ -43,11 +43,23 @@
             <button type="button" id="addActivity" class="form__button">Добавить активность</button>
             <button type="button" id="clearActivities" class="form__button">Очистить программу</button>
             <button type="button" id="generateTable" class="form__button">Показать расписание</button>
-            <p class="selected-activities-title">Выбранные активности:</p>
+            <p id="selectedActivitiesTitle" class="selected-activities-title" style="display: none;">Выбранные активности:</p>
         </form>
         <div id="error-message" class="error-message"></div>
         <div id="todoList" class="todo-list"></div>
-        <div id="scheduleTable" class="schedule-table"></div>
+        <div id="scheduleTable" class="schedule-table" style="display: none;">
+            <table class="zoo-table">
+                <thead>
+                <tr>
+                    <th>Время</th>
+                    <th>Активность</th>
+                    <th>Статус</th>
+                </tr>
+                </thead>
+                <tbody id="scheduleTableBody">
+                </tbody>
+            </table>
+        </div>
     </section>
 </main>
 

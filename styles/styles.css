@@ -428,6 +428,19 @@
         font-weight: bold;
     }
 
+    .remove-button {
+        background-color: #787878;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+
+    .remove-button:hover {
+        background-color: #e55b50;
+    }
+
     @media screen and (max-width: 768px) {
         .nav {
             flex-direction: column;

@@ -3,9 +3,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const clearActivitiesButton = document.getElementById("clearActivities");
     const generateTableButton = document.getElementById("generateTable");
     const todoList = document.getElementById("todoList");
+    const selectedActivitiesTitle = document.getElementById("selectedActivitiesTitle");
     const scheduleTable = document.getElementById("scheduleTable");
+    const scheduleTableBody = document.getElementById("scheduleTableBody");
     const errorMessage = document.getElementById("error-message");
     let activities = JSON.parse(localStorage.getItem("activities")) || [];
+
+    function toggleSelectedActivitiesTitle() {
+        if (activities.length > 0) {
+            selectedActivitiesTitle.style.display = "block";
+        } else {
+            selectedActivitiesTitle.style.display = "none";
+        }
+    }
 
     function addActivity() {
         const selectedOption = document.getElementById("activity").value.split("|");
@@ -24,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("activities", JSON.stringify(activities));
         errorMessage.textContent = "";
         updateTodoList();
+        toggleSelectedActivitiesTitle();
     }
 
     function sortActivitiesByTime() {
@@ -37,44 +48,76 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateTodoList() {
         sortActivitiesByTime();
         todoList.innerHTML = activities.map(
-            activity => `<p>${activity.time} - ${activity.name}</p>`
+            (activity, index) => `
+                <div class="todo-item">
+                    <p>${activity.time} - ${activity.name}</p>
+                    <button class="remove-button" data-index="${index}">Удалить</button>
+                </div>
+            `
         ).join("");
+
+        const removeButtons = document.querySelectorAll(".remove-button");
+        removeButtons.forEach(button => {
+            button.addEventListener("click", removeActivity);
+        });
+    }
+
+    function removeActivity(event) {
+        const activityIndex = parseInt(event.target.dataset.index, 10);
+        activities.splice(activityIndex, 1);
+        localStorage.setItem("activities", JSON.stringify(activities));
+        updateTodoList();
+        toggleSelectedActivitiesTitle();
     }
 
     function generateScheduleTable() {
+        if (activities.length === 0) {
+            errorMessage.textContent = "Список активностей пуст. Добавьте активности перед созданием таблицы.";
+            scheduleTable.style.display = "none";
+            return;
+        }
+
+        errorMessage.textContent = "";
         sortActivitiesByTime();
-        scheduleTable.innerHTML = `
-            <table class="zoo-table">
-                <thead>
-                    <tr>
-                        <th>Время</th>
-                        <th>Активность</th>
-                        <th>Статус</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    ${activities.map(activity => `
-                        <tr>
-                            <td>${activity.time}</td>
-                            <td>${activity.name}</td>
-                            <td>${activity.status}</td>
-                        </tr>
-                    `).join("")}
-                </tbody>
-            </table>
-        `;
+        scheduleTableBody.innerHTML = "";
+
+        activities.forEach(activity => {
+            const row = document.createElement("tr");
+
+            const timeCell = document.createElement("td");
+            timeCell.textContent = activity.time;
+            row.appendChild(timeCell);
+
+            const nameCell = document.createElement("td");
+            nameCell.textContent = activity.name;
+            row.appendChild(nameCell);
+
+            const statusCell = document.createElement("td");
+            statusCell.textContent = activity.status;
+            row.appendChild(statusCell);
+
+            scheduleTableBody.appendChild(row);
+        });
+
+        scheduleTable.style.display = "block";
     }
 
     function clearActivities() {
         activities = [];
         localStorage.removeItem("activities");
         updateTodoList();
-        scheduleTable.innerHTML = "";
+        scheduleTableBody.innerHTML = "";
+        scheduleTable.style.display = "none";
+        toggleSelectedActivitiesTitle();
         errorMessage.textContent = "";
     }
 
     function loadActivities() {
-        if (activities.length > 0) updateTodoList();
+        if (activities.length > 0) {
+            updateTodoList();
+        }
+        toggleSelectedActivitiesTitle();
+        scheduleTable.style.display = "none";
     }
 
     addActivityButton.addEventListener("click", addActivity);

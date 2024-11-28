@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гостевая книга - Мой Любимый Зоопарк</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="../scripts/guestbook.js" defer></script>
+</head>
+
+<body>
+<header class="header">
+    <img src="https://img.freepik.com/premium-vector/zoo-gate-icon-black-white_755164-13783.jpg?semt=ais_hybrid"
+         alt="Логотип зоопарка" class="header__logo">
+    <div class="header__title-container">
+        <h1 class="header__title">Мой Любимый<br>Зоопарк</h1>
+        <p class="header__subtitle">Привет в мире<br><em>удивительных</em> животных!</p>
+    </div>
+</header>
+
+<nav class="nav">
+    <a href="../index.html" class="nav__button">Главная</a>
+    <a href="tickets.html" class="nav__button">Билеты</a>
+    <a href="contacts.html" class="nav__button">Контакты</a>
+    <a href="constructor.html" class="nav__button">Конструктор активностей</a>
+    <a href="guestbook.html" class="nav__button active">Гостевая книга</a>
+</nav>
+
+<main>
+    <h1>Гостевая книга</h1>
+    <section id="guestbook-container"></section>
+    <template id="comment-template">
+        <article class="comment">
+            <h3></h3>
+            <p></p>
+        </article>
+    </template>
+    <img id="preloader" class="preloader" src="https://global.discourse-cdn.com/sitepoint/original/3X/e/3/e352b26bbfa8b233050087d6cb32667da3ff809c.gif" alt="Loading...">
+    <button id="load-more" class="form__button">Загрузить ещё</button>
+</main>
+
+<footer class="footer">
+    <p>&copy; 2024 Мой Любимый Зоопарк. Все права защищены.</p>
+</footer>
+</body>
+</html>

@@ -428,6 +428,10 @@
         font-weight: bold;
     }
 
+    .comment {
+        text-align: center;
+    }
+
     .remove-button {
         background-color: #787878;
         color: white;
@@ -448,12 +452,10 @@
         height: 50px;
     }
 
-    /* Скрытие прелоадера, когда он не нужен */
     #preloader {
         display: none;
     }
 
-    /* При активации кнопки загрузки, скрывать прелоадер */
     #preloader.active {
         display: block;
     }
@@ -523,4 +525,25 @@
 
     .footer__quote {
         text-decoration: line-through;
+    }
+
+     .toaster {
+         position: fixed;
+         top: 20px;
+         right: 20px;
+         background-color: #4CAF50;
+         color: white;
+         padding: 10px;
+         border-radius: 5px;
+         margin-top: 50px;
+         opacity: 0;
+         visibility: hidden;
+         transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s linear 0.5s;
+         z-index: 1000;
+     }
+
+    .toaster.show {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.5s ease, transform 0.5s ease;
     }

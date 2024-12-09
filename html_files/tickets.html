@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="../scripts/tickets.js" defer></script>
     <script src="../scripts/main.js" defer></script>
 </head>
 
@@ -93,11 +94,16 @@
         <p class="section__description">Возврат билетов возможен за 24 часа до даты посещения. Для возврата обращайтесь в кассу зоопарка.</p>
     </section>
 
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="buy-ticket-button">Купить билет</a>
-</main>
+    <button class="buy-ticket-button" id="buyTicketButton">Купить билет</button></main>
+
+    <div class="toaster" id="toaster">
+        Билет успешно куплен!
+    </div>
+
 <footer class="footer">
     <p>&copy; 2024 Мой любимый зоопарк. Все права защищены.</p>
     <blockquote class="footer__quote">Бытие есть, а небытия нет</blockquote>
 </footer>
+
 </body>
 </html>

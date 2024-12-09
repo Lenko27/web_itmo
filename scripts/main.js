@@ -1,5 +1,5 @@
-(function() {
-    window.addEventListener('load', function() {
+(function () {
+    window.addEventListener('load', function () {
         const performanceEntry = performance.getEntriesByType('navigation')[0];
         if (performanceEntry) {
             let loadTime = performance.now();
@@ -11,7 +11,7 @@
     });
 })();
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     let curPage = window.location.pathname;
     let navButtons = document.querySelectorAll(".nav__button");
     navButtons.forEach(button => {
@@ -21,3 +21,4 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+

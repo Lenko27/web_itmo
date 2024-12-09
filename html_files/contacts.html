@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="../scripts/contacts.js" defer></script>
     <script src="../scripts/main.js" defer></script>
 </head>
 
@@ -28,7 +29,7 @@
     <a href="../index.html" class="nav__button">Главная</a>
     <a href="tickets.html" class="nav__button">Билеты</a>
     <a href="contacts.html" class="nav__button">Контакты</a>
-    <a href="constructor.html" class="nav__button"> Конструктор активностей</a>
+    <a href="constructor.html" class="nav__button">Конструктор активностей</a>
     <a href="guestbook.html" class="nav__button">Гостевая книга</a>
 </nav>
 
@@ -45,7 +46,7 @@
 
     <section class="contact-form-section">
         <h2>Свяжитесь с нами</h2>
-        <form class="contact-form">
+        <form class="contact-form" id="contactForm">
             <label for="name">Имя:</label>
             <input type="text" id="name" name="name" required>
 
@@ -59,6 +60,10 @@
         </form>
     </section>
 </main>
+
+<div class="toaster" id="toaster">
+    Сообщение отправлено успешно!
+</div>
 
 <footer class="footer">
     <p>&copy; 2024 Мой любимый зоопарк. Все права защищены.</p>

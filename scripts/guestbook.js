@@ -1,26 +1,22 @@
-let currentStart = Math.random() > 0.5 ? 10 : 20
+let currentStart = 0;
 const limit = 10;
 const guestbookContainer = document.getElementById("guestbook-container");
 const preloader = document.getElementById("preloader");
 const loadMoreButton = document.getElementById("load-more");
 const commentTemplate = document.getElementById("comment-template");
 
-async function fetchComments(start = 0, limit) {
+async function fetchComments(start = 0, limit = 10) {
     const endpoint = `https://jsonplaceholder.typicode.com/posts?_start=${start}&_limit=${limit}`;
     try {
         preloader.style.display = "block";
         loadMoreButton.style.display = "none";
 
-        const timeout = new Promise(resolve => setTimeout(resolve, 3000));
         const response = await fetch(endpoint);
-        await timeout;
-
         if (!response.ok) {
             throw new Error(`Ошибка HTTP: ${response.status}`);
         }
 
         const comments = await response.json();
-
         renderComments(comments);
     } catch (error) {
         displayError("⚠ Что-то пошло не так. Проверьте подключение к интернету.");
@@ -43,13 +39,27 @@ function renderComments(comments) {
         guestbookContainer.appendChild(commentElement);
     });
 
+    ScrollReveal().reveal('.comment', {
+        origin: 'bottom',
+        distance: '50px',
+        duration: 750,
+        interval: 200,
+        reset: false
+    });
+
     loadMoreButton.style.display = "inline-block";
 }
 
+function displayError(message) {
+    const errorElement = document.createElement("p");
+    errorElement.textContent = message;
+    errorElement.style.color = "red";
+    guestbookContainer.appendChild(errorElement);
+}
+
 loadMoreButton.addEventListener("click", async () => {
-    const calculatedRandomLimit = limit * (Math.random() > 0.5 ? 0.5 : 2);
-    currentStart += calculatedRandomLimit;
-    await fetchComments(currentStart, calculatedRandomLimit);
+    currentStart += limit;
+    await fetchComments(currentStart, limit);
 });
 
 document.addEventListener("DOMContentLoaded", async () => {

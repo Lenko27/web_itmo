@@ -116,6 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (activities.length > 0) {
             updateTodoList();
         }
+
         toggleSelectedActivitiesTitle();
         scheduleTable.style.display = "none";
     }
